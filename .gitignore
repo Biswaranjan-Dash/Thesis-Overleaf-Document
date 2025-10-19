@@ -1,0 +1,33 @@
+# LaTeX auxiliary files in bin folder
+bin/
+
+# LaTeX temporary files (in case any are created outside bin)
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.fls
+*.log
+*.fdb_latexmk
+*.snm
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+*.nav
+*.vrb
+*.xdv
+
+# Keep the PDF
+!*.pdf
