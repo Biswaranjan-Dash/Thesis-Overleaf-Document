@@ -1,6 +1,9 @@
 # LaTeX auxiliary files in bin folder
 bin/
 
+# But keep track that bin folder exists
+!bin/.gitkeep
+
 # LaTeX temporary files (in case any are created outside bin)
 *.aux
 *.bbl

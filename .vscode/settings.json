@@ -1,33 +1,39 @@
 {
     "latex-workshop.latex.outDir": "./bin",
+    "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipes": [
         {
-            "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+            "name": "lualatex ➞ bibtex ➞ lualatex × 2",
             "tools": [
-                "xelatex",
+                "lualatex",
                 "bibtex",
-                "xelatex",
-                "xelatex"
+                "lualatex",
+                "lualatex",
+                "copy_pdf"
             ]
         },
         {
-            "name": "latexmk (xelatex)",
+            "name": "latexmk (lualatex)",
             "tools": [
-                "latexmk_xelatex"
+                "latexmk_lualatex",
+                "copy_pdf"
             ]
         }
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "xelatex",
-            "command": "xelatex",
+            "name": "lualatex",
+            "command": "lualatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
                 "%DOC%"
-            ]
+            ],
+            "env": {
+                "LUAINPUTS": "E:/apps/mitek/tex/luatex///"
+            }
         },
         {
             "name": "bibtex",
@@ -37,16 +43,33 @@
             ]
         },
         {
-            "name": "latexmk_xelatex",
+            "name": "latexmk_lualatex",
             "command": "latexmk",
             "args": [
-                "-xelatex",
+                "-lualatex",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
-            ]
+            ],
+            "env": {
+                "LUAINPUTS": "E:/apps/mitek/tex/luatex///"
+            }
+        },
+        {
+            "name": "copy_pdf",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Copy-Item",
+                "-Path",
+                "./bin/%DOCFILE%.pdf",
+                "-Destination",
+                "./%DOCFILE%.pdf",
+                "-Force"
+            ],
+            "env": {}
         }
     ],
     "latex-workshop.latex.magic.args": [

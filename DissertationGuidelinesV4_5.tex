@@ -1,5 +1,4 @@
-% !TEX program = xelatex
-% Note: Changed from lualatex due to MiKTeX luaotfload issues
+% !TEX program = lualatex
 \documentclass[12pt,a4paper,oneside]{NITR}
 
 \usepackage{listings}
@@ -8,15 +7,17 @@
 \usepackage{xcolor}
 %\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 \usepackage[linesnumbered,ruled,vlined,longend]{algorithm2e}
-\usepackage{adjustbox}
+\usepackage[export]{adjustbox}
 \usepackage{tcolorbox}
 \tcbuselibrary{listingsutf8}
 \usepackage[hyphens]{url}
+\usepackage{multirow}
+\usepackage[headheight=28pt]{geometry}
 
 %\documentclass{article}
 \usepackage{titlesec}
-\usepackage{graphicx} % Required for inserting images
-\usepackage[export]{adjustbox}
+% \usepackage{graphicx} % Required for inserting images - loaded later
+%\usepackage[export]{adjustbox}  % Already loaded above with export option
 %\usepackage{blindtext}
 %\usepackage{geometry}
 %\usepackage{multirow}
@@ -28,11 +29,11 @@
 \usepackage{subcaption}
 \usepackage{caption}
 \usepackage{float}
-\usepackage{listings}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{xcolor}
-\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage{listings}  % Already loaded above
+%\usepackage{amsfonts}  % Already loaded above
+%\usepackage{amssymb}   % Already loaded above
+%\usepackage{xcolor}    % Already loaded above
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}  % Already loaded above with longend option
 %\usepackage[usenames,dvipsnames]{color}
 %\usepackage[colorlinks=true,breaklinks,backref=true,linkcolor={MidnightBlue},citecolor={Fuchsia},urlcolor={OliveGreen}]{hyperref}
 \usepackage[none]{hyphenat}
