@@ -119,16 +119,10 @@
 \rhead{\textit{References}}
 \lhead{}
 \renewcommand\bibname{References}
+\addcontentsline{toc}{chapter}{References}
 
-%%%\bibliographystyle{Ref/IEEEtran}
-% \bibliographystyle{Ref/asme}
-%%%\bibliographystyle{Ref/naturemag}
-%%%\bibliographystyle{Ref/bmes}
-%%%\bibliographystyle{Ref/achemso}
-%%%\bibliographystyle{Ref/rsc}
-%%%\bibliographystyle{Ref/osajnl}
-%%
-%
+\bibliographystyle{plain}
+\bibliography{Chap01/ref}
 \cleardoublepage
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % %
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -141,9 +135,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \indexColumns{3}
 \indexPage
-\bibliographystyle{plain}  % or another style like ieeetr, acm, etc.
-\bibliography{ref}% references.bib is the file name of your bibtex file
-\nocite{*}
 % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \end{document}

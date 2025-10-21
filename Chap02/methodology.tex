@@ -15,6 +15,13 @@ Therefore, the solution is using the:
 \section{System Architecture}
 Proposed system is a combination of IoT devices, cloud storages, and security based on blockchain. It can be divided into four primary layers:
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Chap02/System_Architecture.png}
+    \caption{System Architecture of Remote Patient Monitoring}
+    \label{fig:system_architecture}
+\end{figure}
+
 \subsection{Patient Layer (Device Layer)}
 \begin{itemize}
    \item Temperature Sensor (LM35) and Pulse Oximeter (MAX30100) are examples of the sensors that might be included in this system.
@@ -61,8 +68,16 @@ Before accepting the data, the blockchain verifies the sender (patient’s devic
 \end{itemize}
 
 \section{Working Flow}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Chap02/workflow.png}
+    \caption{System Workflow: Registration, Authentication, Data Transmission, and Monitoring}
+    \label{fig:workflow}
+\end{figure}
+
 \subsection{Patient Registration}
-The patient’s device is registered with the hospital server. A smart card with cryptographic parameters is generated and saved on the blockchain.
+The patient's device is registered with the hospital server. A smart card with cryptographic parameters is generated and saved on the blockchain.
 
 \subsection{Data Collection}
 The sensors take the vital signs of the patient (temperature, SpO₂) and forward the data to the Arduino.
@@ -82,7 +97,7 @@ The data, after verification, is pulled out by the hospital server, and the doct
 
 
 \section{Algorithm Explanation}
-The presented scheme is a simplified, lightweight, blockchain-enabled authentication version from the Internet of Drones paper, that was the basis for the system.
+The presented scheme is a simplified, lightweight, blockchain-enabled authentication version from the Internet of Drones paper \cite{1}, that was the basis for the system.
 
 It has three steps:
 
@@ -108,6 +123,13 @@ It has three steps:
     \item Data are securely transmitted to the cloud.
     \item Hospital server gets the data decrypted for doctors' viewing.
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Chap02/Algo_diagram.png}
+    \caption{Algorithm Flow Diagram}
+    \label{fig:algo_diagram}
+\end{figure}
 
 \section{Mathematical Overview of ECC (Simplified)}
 The equation for the elliptic curve cryptography (ECC) curve is:
@@ -139,7 +161,7 @@ This is the key that is utilized for encrypting the medical data before the data
     \caption{System Stages, Components, and Purpose}
     \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
         \hline
-        	extbf{Stage} & \textbf{Component Used} & \textbf{Purpose} \\ \hline
+        \textbf{Stage} & \textbf{Component Used} & \textbf{Purpose} \\ \hline
         Data Collection & Temperature \& SpO₂ Sensors, Arduino UNO & Capture real-time health data \\ \hline
         Transmission & ESP8266 Wi-Fi Module & Send data to cloud securely \\ \hline
         Authentication & Blockchain + ECC & Verify device and user identity \\ \hline
