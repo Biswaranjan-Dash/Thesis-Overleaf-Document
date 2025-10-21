@@ -532,7 +532,7 @@
 	\linespread{1}
 	\begin{minipage}{.45\textwidth}
 		\begin{flushleft}
-			\@setMonth~\@setDate,~\@setYear\\
+			Oct 21, 2025\\
 			NIT Rourkela
 		\end{flushleft}
 	\end{minipage}
