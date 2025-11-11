@@ -16,6 +16,11 @@
 
 %\documentclass{article}
 \usepackage{titlesec}
+
+% Make subsection headings italic instead of bold
+\titleformat{\subsection}
+  {\normalfont\normalsize\itshape}{\thesubsection}{1em}{}
+
 % \usepackage{graphicx} % Required for inserting images - loaded later
 %\usepackage[export]{adjustbox}  % Already loaded above with export option
 %\usepackage{blindtext}
@@ -121,8 +126,13 @@
 \renewcommand\bibname{References}
 \addcontentsline{toc}{chapter}{References}
 
+% Reduce font size for references to fit on one page
+\small
+\setlength{\bibsep}{4pt plus 0.3ex}
 \bibliographystyle{plain}
 \bibliography{Chap01/ref}
+\normalsize
+
 \cleardoublepage
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % %
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % %

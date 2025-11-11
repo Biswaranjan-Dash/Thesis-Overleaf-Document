@@ -3,20 +3,13 @@
 The objective of the present work was to devise a radically secure and a very light in terms of computing remote patient monitoring system that safeguards the data collected through blockchain technology and employing Elliptic Curve Cryptography (ECC). The system topology suggests that any patient health data in real-time, e.g. body temperature and oxygen saturation, IoT-based sensors can collect these details. After that, the data will undergo secure transmission to the cloud for medical review.
 With the help of blockchain and ECC that are strategically combined, the layout accomplishes a successful equilibrium among safety, effectiveness, and scalability aspects thus it solves the problems to a large extent. These include issues concerning the healthcare IoT sector in general: data tampering, unauthorized access, and privacy breaches. Mutual authentication, data confidentiality, and user anonymity are some of the features implemented deepening on this system, therefore this makes the proposed framework highly compatible with med-tech integration.
 At the moment, this work is mainly focused on the conceptualization part including the design of the system, the drafting of the algorithm and composition of the architecture which has been well demonstrated by this study as an effective method for securely storing medical data while the overhead is maximum kept at a minimum.
+
+
 \section{Future Scope}
-At a later date, an actual working version of the system envisaged in this proposal will be possible to achieve in this project. The subsequent axe will be:
+Building upon the successfully implemented hardware prototype and cloud integration achieved in this work, several enhancements and extensions are proposed for future development:
 \begin{itemize}
-	\item Hardware Implementation: Construction of a patient node to record and report data using an Arduino UNO, ESP8266 Wi-Fi module, LM35 temperature sensor, and MAX30100 pulse oximeter.
-	\item Software Development: Executing the authentication algorithm via ECC to achieve encryption and blockchain employed for decentralized confirmation of smartcards and device identification.
-	\item Cloud Integration: Encrypting data uploaded to the ThingSpeak cloud platform facilitating the on-the-fly visualization by medical personnel.
-	\item Performance Testing: Checking parameters like calculation time, network delay, data integrity, and energy consumption in a demo environment consisting of resource-limited hardware to evaluate the prototype.
-	\item Scalability and Deployment: Amplifying the concept so it would cater the medical needs of several patients and doctors at a time, and maybe, merge mHealth (Mobile health) applications or hospital management systems functionality.
+	\item Enhanced Security Features: The deployment of a variety of new security measures such as an intrusion detection system, anomaly detection algorithms for identifying unusual behavior of devices, and a multi-factor authentication mechanism for healthcare staff accessing patient data.
+	\item Extended Sensor Network: Expansion of the physiological monitoring capabilities through the addition of medical sensors like ECG modules, blood pressure monitors, and glucose level sensors to enable comprehensive patient health monitoring.
+	\item Performance Optimization: Various performance benchmarking activities to measure and improve computation time, network latency, data throughput, energy efficiency, and battery life of the ESP32-based patient monitoring devices under different network scenarios have been carried out.
+	\item Machine Learning Integration: The use of AI and ML algorithms for health predictive analytics, early disease recognition, and automated alert generation due to abnormal vital sign patterns obtained from cloud-stored patient data has been implemented.
 \end{itemize}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap03/hardware.png}
-	\caption{Hardware Architecture Diagram}
-	\label{fig:hardware_diagram}
-\end{figure}
